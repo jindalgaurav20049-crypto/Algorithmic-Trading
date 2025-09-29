@@ -1,6 +1,11 @@
+
+---
+
+### 2. `requirements.txt`
+```txt
+backtesting
 yfinance
 pandas
-numpy
 matplotlib
-backtesting
-jupyter
+numpy
+pyyaml
