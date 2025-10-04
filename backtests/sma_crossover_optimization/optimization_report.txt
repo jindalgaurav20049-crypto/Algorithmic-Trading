@@ -1,0 +1,100 @@
+================================================================================
+COMPREHENSIVE SMA CROSSOVER STRATEGY OPTIMIZATION REPORT
+================================================================================
+
+Analysis Period: 2015-10-01 00:00:00 to 2025-10-01 00:00:00
+Total Trading Days: 2610
+
+================================================================================
+OPTIMAL PARAMETERS (Maximum Annualized Return)
+================================================================================
+Short SMA: 8 days
+Long SMA: 20 days
+Maximum Holding Period: 60 days
+Stop-Loss: 0.00%
+Take-Profit: 0.00%
+
+PERFORMANCE METRICS:
+  Annualized Return: 18.71%
+  Sharpe Ratio: 1.15
+  Maximum Drawdown: 15.89%
+  Annualized Volatility: 13.22%
+  Win Rate: 60.27%
+  Number of Trades: 73
+
+COMPARISON TO BUY-AND-HOLD:
+  Buy-and-Hold Return: 1039.06%
+  Buy-and-Hold Annualized: 27.54%
+  Strategy Outperformance: -8.83%
+
+================================================================================
+TOP 5 PARAMETER SETS
+================================================================================
+
+Rank 1:
+  S=8, L=20, H=60, SL=0.00%, TP=0.00%
+  Return: 18.71%, Sharpe: 1.15, Trades: 73
+
+Rank 2:
+  S=8, L=20, H=50, SL=0.00%, TP=0.00%
+  Return: 17.85%, Sharpe: 1.14, Trades: 73
+
+Rank 3:
+  S=13, L=20, H=60, SL=0.00%, TP=0.00%
+  Return: 16.97%, Sharpe: 1.07, Trades: 67
+
+Rank 4:
+  S=5, L=60, H=60, SL=0.00%, TP=0.00%
+  Return: 16.73%, Sharpe: 1.26, Trades: 37
+
+Rank 5:
+  S=13, L=20, H=50, SL=0.00%, TP=0.00%
+  Return: 15.57%, Sharpe: 1.03, Trades: 67
+
+================================================================================
+RECOMMENDATIONS FOR LIVE TRADING
+================================================================================
+Position Sizing:
+  - Use fixed fractional sizing at 1% risk per trade
+  - Calculate position size based on stop-loss distance
+  - Example: If account = $100,000, risk = $1,000 per trade
+  - With 0.00% stop-loss, position size = Risk / Stop-loss
+
+Risk Management:
+  - Never risk more than 2% of capital on any single trade
+  - Use the optimized stop-loss and take-profit levels
+  - Monitor maximum holding period to avoid overexposure
+  - Review strategy performance monthly
+
+Execution:
+  - Use limit orders to minimize slippage
+  - Execute trades at market close or next market open
+  - Account for 0.1% transaction costs in all calculations
+
+================================================================================
+WARNINGS AND RISKS
+================================================================================
+1. OVERFITTING RISK:
+   The parameters are optimized on historical data and may not
+   perform as well in future market conditions.
+
+2. MARKET REGIME SHIFTS:
+   Strategy performance varies across different market regimes.
+   Bull markets may favor different parameters than bear markets.
+
+3. TRANSACTION COSTS:
+   High-frequency trading (>100 trades/year) can erode returns
+   due to cumulative transaction costs and slippage.
+
+4. SLIPPAGE:
+   Real-world execution prices may differ from backtest prices,
+   especially during volatile markets or with large positions.
+
+5. BLACK SWAN EVENTS:
+   The strategy may not protect against extreme market events
+   not present in the historical data.
+
+6. PARAMETER STABILITY:
+   Review sensitivity analysis to understand how parameter
+   variations affect performance. Unstable parameters may
+   indicate overfitting.
