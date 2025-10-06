@@ -660,13 +660,13 @@ class ParameterOptimizer:
         # Calculate Sharpe ratio (assuming 6.5% risk-free rate)
         returns = pd.Series(equity_curve).pct_change().dropna()
         excess_returns = returns - (0.065 / 252)  # Daily risk-free rate
-        sharpe_ratio = (excess_returns.mean() / excess_returns.std() * np.sqrt(252)) if len(returns) > 1 else 0
+        sharpe_ratio = (excess_returns.mean() / excess_returns.std() * np.sqrt(252)) if len(returns) > 1 and excess_returns.std() > 0 else 0
         
         # Max drawdown
         equity_series = pd.Series(equity_curve)
         running_max = equity_series.expanding().max()
         drawdown = (equity_series - running_max) / running_max
-        max_drawdown = drawdown.min()
+        max_drawdown = drawdown.min() if not drawdown.empty else 0
         
         # Win rate
         win_rate = (total_wins / total_trades * 100) if total_trades > 0 else 0
@@ -765,9 +765,9 @@ def calculate_buy_hold_benchmark(ticker: str = '^NSEI',
     max_drawdown = drawdown.min()
     
     return {
-        'annualized_return': annualized_return * 100,
-        'total_return': total_return * 100,
-        'max_drawdown': max_drawdown * 100,
+        'annualized_return': float(annualized_return * 100),
+        'total_return': float(total_return * 100),
+        'max_drawdown': float(max_drawdown * 100),
         'sharpe_ratio': 0  # Would need daily returns to calculate
     }
 
