@@ -1,11 +1,9 @@
-
----
-
-### 2. `requirements.txt`
-```txt
 backtesting
 yfinance
 pandas
 matplotlib
 numpy
 pyyaml
+scipy
+tqdm
+kiteconnect
