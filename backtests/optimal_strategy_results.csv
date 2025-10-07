@@ -1,0 +1,2 @@
+parameter_set,initial_capital,final_capital,total_return_pct,annualized_return_pct,sharpe_ratio,max_drawdown_pct,win_rate_pct,total_trades,trades_per_year,benchmark_return_pct,outperformance_pct,entry_days_post_announcement,exit_days_post_effective,position_size_pct,stop_loss_pct,take_profit_pct,flow_filter_cr,trade_mode
+optimal,1000000,1018665.0119249526,1.8665011924952617,0.20189218135060472,3.166176110766832,-0.551562030897104,53.03030303030303,66,7.198118841445207,11.807788688505894,-11.60589650715529,2,3,2.5,5.0,10.0,500,CNC
